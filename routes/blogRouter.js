@@ -31,6 +31,12 @@ router.get('/login', (req, res) => {
 router.get('/registration', (req, res) => {
     res.render('./registration')
 })
+router.get('/postBlog', (req, res) => {
+    res.render('./postBlog')
+})
+router.get('/editBlog', (req, res) => {
+    res.render('./editBlog')
+})
 
 
 
