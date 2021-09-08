@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-Store</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- FONTAWSOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- CUSTOM CSS STYLE -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER SECTION START -->
+    <%- include('common/header.ejs') %>
+        <!-- HEADER SECTION END -->
+        <!-- CAROUSEL SECTION START -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active header-carousel">
+                    <img src="./images/heading1.jpg" class="d-block caro-image" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>How roaming around is good for you</h5>
+                        <p>Some representative placeholder content for the first slide. Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. <br> Officia soluta natus sapiente dolorem voluptas id!</p>
+                        <button class="btn1 mr-1">ABOUT NOW</button>
+                        <button class="btn2 ms-5">MORE</button>
+                    </div>
+                </div>
+                <div class="carousel-item header-carousel">
+                    <img src="./images/heading2.jpg" class="d-block caro-image" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>How roaming around is good for you</h5>
+                        <p>Some representative placeholder content for the first slide. Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. <br> Officia soluta natus sapiente dolorem voluptas id!</p>
+                        <button class="btn1 mr-1">ABOUT NOW</button>
+                        <button class="btn2 ms-5">MORE</button>
+                    </div>
+                </div>
+                <div class="carousel-item header-carousel">
+                    <img src="./images/heading3.jpg" class="d-block caro-image" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>How roaming around is good for you</h5>
+                        <p>Some representative placeholder content for the first slide. Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. <br> Officia soluta natus sapiente dolorem voluptas id!</p>
+                        <button class="btn1 mr-1">ABOUT NOW</button>
+                        <button class="btn2 ms-5">MORE</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- CAROUSEL SECTION END -->
+        <!-- LIFESTYLE START  -->
+        <section class="container mt-1 py-3">
+            <div class="container-fluid">
+                <div class="l-Heading text-center">
+                    <h1>Lifestyle of <span>Woman</span> in London</h1>
+                    <p>A PLACE FOR YOUR FITNESS GOAL OF ATHLETIC-BASED GROUP TRAINING</p>
+                </div>
+                <div class="row life-row d-flex justify-content-between mt-5 py-2">
+                    <div class="col-md-7 life-desc">
+                        <h6>Top 10 tips with common lifestyles</h6>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            launtium,
+                            Sed ut perspiciatis unde omnis iste natus error sit ueed ut perspiciatis unde omnis iste
+                            natus
+                            error sit vtotam.
+                        </p><br>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            launtium,
+                            Sed ut perspiciatis unde omnis iste natus error sit ueed ut perspiciatis unde omnis iste
+                            natus
+                            error sit vtotam.
+                        </p>
+                        <button>READ MORE LIFESTYLE</button>
+                    </div>
+                    <div class="col-md-5 col-lg-5">
+                        <img class="img-fluid fitness-img" src="./images/girl.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- LIFESTYLE END  -->
+        <section class="blog-card-section">
+            <div class="container">
+                <h4>MOST <span>POPULAR</span> BLOG</h4>
+                <div class="row">
+                    <% blogs.forEach(blog=>{%>
+                        <!-- fglsfdgj -->
+
+                        <div class="col-md-8 col-lg-8">
+                            <div class="card mb-3">
+                                <div class=" row g-0">
+                                    <div class="col-md-4">
+                                        <img class="blog-card" src="./images/pr.jpg" alt="">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <small class="blog-card-heading">TIPS FOR WRITING</small>
+                                            <h5 class="card-title">Growing Your Knowledge</h5>
+                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit.
+                                                Quis
+                                                ipsum
+                                                rem, delectus deserunt consectetur saepe? Expedita sapiente rerum
+                                                nostrum
+                                                fuga
+                                                non
+                                                iure minima sunt inventore.</p>
+                                            <div class="optionnal">
+                                                <img class="writer-img" src="./images/pr.jpg" alt="">
+                                                <small class="text-muted float-end">Last updated 3 mins ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%})%>
+
+                            <!-- fglsfdgj -->
+                            <div class="col-md-4 col-lg-4">
+                                <div class="popular-post mb-5">
+                                    <div class="p">
+                                        <img src="./images/writer.jpg" alt="" class="p-p-image">
+                                    </div>
+                                    <div class="p-p-body">
+                                        <h5>Hello! I am Steven</h5>
+                                        <p>
+                                            Hi, I'm Steven, a Florida native, who left my carrer in corporate wealth
+                                            management
+                                            six
+                                            years corporate wealth.Stories is a clean and minimal blog template for
+                                            perfect
+                                            for
+                                            writers
+                                            who need to create personal blog site with simple creative.
+                                        </p>
+                                        <span>
+                                            Follow me:
+                                            <i class="fab fa-facebook custom"></i>
+                                            <i class="fab fa-linkedin custom"></i>
+                                            <i class="fab fa-twitter-square custom"></i>
+                                            <i class="fab fa-pinterest-square printers"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- <hr> -->
+                                <div class="popular-post">
+                                    <div class="p">
+                                        <img src="./images/an.jpg" alt="" class="img-fluid p-image">
+                                    </div>
+                                    <div class="p-p-body">
+                                        <h5>Hello! I am Xchng</h5>
+                                        <p>
+                                            Hi, I'm Steven, a Florida native, who left my carrer in corporate wealth
+                                            management
+                                            six
+                                            years corporate wealth.Stories is a clean and minimal blog template for
+                                            perfect
+                                            for
+                                            writers
+                                        </p>
+                                        <span>
+                                            Follow me:
+                                            <i class="fab fa-facebook custom"></i>
+                                            <i class="fab fa-linkedin custom"></i>
+                                            <i class="fab fa-twitter-square custom"></i>
+                                            <i class="fab fa-pinterest-square printers"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="container parallex py-5 mt-2">
+            <div class="container py-5 text-white  text-center">
+                <div class="row py-3">
+                    <div class="col-lg-9 mx-auto">
+                        <h1>The Secret Of <span>Getting Ahead </span> Is Getting Started</h1>
+                        <p class="py-2">With the release of Letraset sheets containing Lorem Ipsum passages, and more
+                            recently with desktop publishing software like Aldus PageMaker including versions.publishing
+                            software like Aldus PageMaker </p>
+                        <button class="btn1 mr-1">ABOUT NOW</button>
+                        <button class="btn2 mr-1">MORE INFO</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="achive-container">
+            <div class="container mt-5 text-center">
+                <h1 class="section-heading"><span>TOP BLOGS</span> GALLARY</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the
+                    industry's.standard.<br>
+                    since the been when an unknown printer dummy text ever.</p>
+                <div class="achive-card-wrapper">
+                    <div class="achive-card">
+                        <div class="overlay">
+                            <span>The Brain Is Wider Than The Sky</span>
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo suscipit repellat
+                                cupiditate ipsam labore?</a>
+                        </div>
+                        <img src="./images/w1.jpg" alt="">
+                    </div>
+                    <div class="achive-card">
+                        <div class="overlay">
+                            <span>The Brain Is Wider Than The Sky</span>
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo suscipit repellat
+                                cupiditate ipsam labore?</a>
+                        </div>
+                        <img src="./images/w5.jpg" alt="">
+                    </div>
+                    <div class="achive-card">
+                        <div class="overlay">
+                            <span>The Brain Is Wider Than The Sky</span>
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo suscipit repellat
+                                cupiditate ipsam labore?</a>
+                        </div>
+                        <img src="./images/w2.jpg" alt="">
+                    </div>
+                    <div class="achive-card">
+                        <div class="overlay">
+                            <span>The Brain Is Wider Than The Sky</span>
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo suscipit repellat
+                                cupiditate ipsam labore?</a>
+                        </div>
+                        <img src="./images/w4.jpg" alt="">
+                    </div>
+                    <div class="achive-card">
+                        <div class="overlay">
+                            <span>The Brain Is Wider Than The Sky</span>
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo suscipit repellat
+                                cupiditate ipsam labore?</a>
+                        </div>
+                        <img src="./images/w3.jpg" alt="">
+                    </div>
+                    <div class="achive-card">
+                        <div class="overlay">
+                            <span>The Brain Is Wider Than The Sky</span>
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo suscipit repellat
+                                cupiditate ipsam labore?</a>
+                        </div>
+                        <img src="./images/w6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%- include('common/footer.ejs') %>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>
