@@ -15,6 +15,11 @@ const BlogSchema = new mongoose.Schema({
         require: true,
         trim: true,
     },
+    subject: {
+        type: String,
+        require: true,
+        trim: true,
+    },
     description: {
         type: String,
         require: true,

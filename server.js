@@ -16,6 +16,7 @@ app.set('view engine', 'ejs')
 // app.use('/', userRouter);
 
 app.use('/', blogRouter);
+app.use('/user', userRouter);
 
 
 app.listen(PORT, () => {

@@ -39,47 +39,51 @@
                     <img class="img-fluid registerImg" src="./images/reg.jpg" alt="">
                 </div>
                 <div class="col-md-6 col-lg-6 py-5 mt-5">
-                    <form class="row g-3">
+                    <form action="/user/registration" method="POST" class="row g-3">
                         <div class="col-md-6">
-                            <label for="fname" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="fname">
+                            <label for="firstname" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="fname" name="firstname"
+                                placeholder="First Name">
                         </div>
                         <div class="col-md-6">
-                            <label for="lname" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="lname">
+                            <label for="lastname" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lname" name="lastname" placeholder="Last Name">
                         </div>
 
                         <div class="col-12">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="">
+                            <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                         </div>
 
                         <div class="col-md-6">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password">
+                            <input type="password" class="form-control" id="password" name="password"
+                                Placeholder="Password">
                         </div>
                         <div class="col-md-6">
                             <label for="cPassword" class="form-label">Confirm Password</label>
-                            <input type="cPassword" class="form-control" id="cPassword">
+                            <input type="password" class="form-control" id="cPassword" name="cPassword"
+                                placeholder="Confirm Password">
                         </div>
 
                         <div class="col-md-6">
                             <label for="address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="address">
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Address">
                         </div>
                         <div class="col-md-6">
                             <label for="mnumber" class="form-label">Mobile Number</label>
-                            <input type="text" class="form-control" id="mnumber">
+                            <input type="text" class="form-control" id="mnumber" name="mobilenumber"
+                                placeholder="Mobile Number">
                         </div>
 
 
                         <div class="col-md-6">
                             <label for="subject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="subject" placeholder="">
+                            <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
                         </div>
                         <div class="col-md-6">
                             <label for="age" class="form-label">Age</label>
-                            <input type="text" class="form-control" id="age">
+                            <input type="text" class="form-control" id="age" placeholder="Age" name="age">
                         </div>
                         <div class="col-12">
                             <button type="submit" class="reg-btn">SIGN UP</button>

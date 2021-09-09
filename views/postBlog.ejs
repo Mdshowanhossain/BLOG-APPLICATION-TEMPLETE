@@ -38,14 +38,22 @@
                     <img class="img-fluid logimg" src="./images/write.jpg" alt="">
                 </div>
                 <div class="col-md-6 col-lg-6  mt-">
-                    <form class="row g-3 mt-5 pt-5">
+                    <form action="/post" method="POST" enctype="multipart/form-data" class="row g-3 mt-5 pt-5">
                         <div class="col-12">
                             <label for="text" class="form-label">Title</label>
-                            <input type="text" class="form-control" id="text" placeholder="">
+                            <input type="text" class="form-control" placeholder="Enter Title" name="title" id="title"
+                                required>
                         </div>
+
                         <div class="col-12">
-                            <label for="tex" class="form-label">About</label>
-                            <input type="tex" class="form-control" id="text" placeholder="">
+                            <label for="tex" class="form-label">Author</label>
+                            <input type="tex" class="form-control" id="author" placeholder="Author Name" name="author"
+                                required>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="text" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="text" placeholder="Subject" name="subject">
                         </div>
                         <!-- <div class="col-12">
                             <label for="tex" class="form-label">Description</label> -->
@@ -53,15 +61,15 @@
                         <!-- <textarea name="" id="" cols="100"></textarea> -->
                         <!-- </div> -->
                         <div class="col-12">
-                            <textarea name="" id="" cols="125" rows="7" placeholder="Write Description"></textarea>
+                            <textarea name="description" id="" cols="125" rows="7"
+                                placeholder="Write Description"></textarea>
                         </div>
 
                         <div class="col-5">
-                            <!-- <label for="tex" class="form-label">Password</label> -->
-                            <input type="file" class="form-control" id="text" placeholder="">
+                            <input type="file" class="form-control-file" id="image" name="image">
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="reg-btn">LOG IN</button>
+                            <button type="submit" class="reg-btn">SEND</button>
                         </div>
                     </form>
                 </div>

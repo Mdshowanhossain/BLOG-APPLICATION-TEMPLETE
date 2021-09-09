@@ -34,14 +34,14 @@ const UserSchema = new mongoose.Schema({
         min: 3,
         require: true,
     },
-    subject: {
-        type: String,
-        min: 3,
-        require: true,
-    },
     mobilenumber: {
         type: Number,
         min: 10,
+        require: true,
+    },
+    subject: {
+        type: String,
+        min: 3,
         require: true,
     },
     age: {

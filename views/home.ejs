@@ -111,94 +111,103 @@
             <div class="container">
                 <h4>MOST <span>POPULAR</span> BLOG</h4>
                 <div class="row">
-                    <% blogs.forEach(blog=>{%>
-                        <!-- fglsfdgj -->
 
-                        <div class="col-md-8 col-lg-8">
-                            <div class="card mb-3">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img class="blog-card" src="./images/pr.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <small class="blog-card-heading">TIPS FOR WRITING</small>
-                                            <h5 class="card-title">Growing Your Knowledge</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Quis
-                                                ipsum
-                                                rem, delectus deserunt consectetur saepe? Expedita sapiente rerum
-                                                nostrum
-                                                fuga
-                                                non
-                                                iure minima sunt inventore.</p>
-                                            <div class="optionnal">
-                                                <img class="writer-img" src="./images/pr.jpg" alt="">
-                                                <small class="text-muted float-end">Last updated 3 mins ago</small>
+                    <div class="col-md-8 col-lg-8">
+                        <% blogs.forEach(blog=>{%>
+                            <div>
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <a href="/show/<%=blog.slug%>">
+                                                <img class="blog-card" src="/uploads/images/<%= blog.image %>" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <small class="blog-card-heading">
+                                                    <%=blog.subject%>
+                                                </small>
+                                                <h5 class="card-title">
+                                                    <%=blog.title%>
+                                                </h5>
+                                                <p class="card-text">
+                                                    <%=blog.description%>
+                                                </p>
+                                                <div class="optionnal">
+                                                    <img class="writer-img" src="/uploads/images/<%= blog.image %>"
+                                                        alt="">
+                                                    <small>
+                                                        <%=blog.author%>
+                                                    </small>
+                                                    <small class="text-muted float-end">Last Update
+                                                        <%=blog.createdAt.toLocaleDateString()%>
+                                                    </small>
+                                                </div>
+                                                <div class="link-div-btn">
+                                                    <a href="/edit/<%=blog.id%>" type="button" class="link-btn">Edit</a>
+                                                    <a href="/delete/<%=blog.id%>" type="button"
+                                                        class="link-btn float-end">Delete</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <%})%>
-
-                            <!-- fglsfdgj -->
-                            <div class="col-md-4 col-lg-4">
-                                <div class="popular-post mb-5">
-                                    <div class="p">
-                                        <img src="./images/writer.jpg" alt="" class="p-p-image">
-                                    </div>
-                                    <div class="p-p-body">
-                                        <h5>Hello! I am Steven</h5>
-                                        <p>
-                                            Hi, I'm Steven, a Florida native, who left my carrer in corporate wealth
-                                            management
-                                            six
-                                            years corporate wealth.Stories is a clean and minimal blog template for
-                                            perfect
-                                            for
-                                            writers
-                                            who need to create personal blog site with simple creative.
-                                        </p>
-                                        <span>
-                                            Follow me:
-                                            <i class="fab fa-facebook custom"></i>
-                                            <i class="fab fa-linkedin custom"></i>
-                                            <i class="fab fa-twitter-square custom"></i>
-                                            <i class="fab fa-pinterest-square printers"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <!-- <hr> -->
-                                <div class="popular-post">
-                                    <div class="p">
-                                        <img src="./images/an.jpg" alt="" class="img-fluid p-image">
-                                    </div>
-                                    <div class="p-p-body">
-                                        <h5>Hello! I am Xchng</h5>
-                                        <p>
-                                            Hi, I'm Steven, a Florida native, who left my carrer in corporate wealth
-                                            management
-                                            six
-                                            years corporate wealth.Stories is a clean and minimal blog template for
-                                            perfect
-                                            for
-                                            writers
-                                        </p>
-                                        <span>
-                                            Follow me:
-                                            <i class="fab fa-facebook custom"></i>
-                                            <i class="fab fa-linkedin custom"></i>
-                                            <i class="fab fa-twitter-square custom"></i>
-                                            <i class="fab fa-pinterest-square printers"></i>
-                                        </span>
-                                    </div>
-                                </div>
+                            <%})%>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="popular-post mb-5">
+                            <div class="p">
+                                <img src="./images/writer.jpg" alt="" class="p-p-image">
                             </div>
+                            <div class="p-p-body">
+                                <h5>Hello! I am Steven</h5>
+                                <p>
+                                    Hi, I'm Steven, a Florida native, who left my carrer in corporate wealth
+                                    management
+                                    six
+                                    years corporate wealth.Stories is a clean and minimal blog template for
+                                    perfect
+                                    for
+                                    writers
+                                    who need to create personal blog site with simple creative.
+                                </p>
+                                <span>
+                                    Follow me:
+                                    <i class="fab fa-facebook custom"></i>
+                                    <i class="fab fa-linkedin custom"></i>
+                                    <i class="fab fa-twitter-square custom"></i>
+                                    <i class="fab fa-pinterest-square printers"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- <hr> -->
+                        <div class="popular-post">
+                            <div class="p">
+                                <img src="./images/an.jpg" alt="" class="img-fluid p-image">
+                            </div>
+                            <div class="p-p-body">
+                                <h5>Hello! I am Xchng</h5>
+                                <p>
+                                    Hi, I'm Steven, a Florida native, who left my carrer in corporate wealth
+                                    management
+                                    six
+                                    years corporate wealth.Stories is a clean and minimal blog template for
+                                    perfect
+                                    for
+                                    writers
+                                </p>
+                                <span>
+                                    Follow me:
+                                    <i class="fab fa-facebook custom"></i>
+                                    <i class="fab fa-linkedin custom"></i>
+                                    <i class="fab fa-twitter-square custom"></i>
+                                    <i class="fab fa-pinterest-square printers"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </section>
         <section class="container parallex py-5 mt-2">
@@ -274,7 +283,6 @@
             </div>
         </section>
         <%- include('common/footer.ejs') %>
-
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
                 crossorigin="anonymous"></script>
